@@ -1,0 +1,3 @@
+label   name    kind    level   outer   type    para?   ref     seg     link    
+5       t       var     2       0       int             -1      2       4       
+4       p       var     2       0       int     par     -1      0       -1      

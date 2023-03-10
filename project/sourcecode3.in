@@ -1,0 +1,21 @@
+int a;
+int b;
+int c;
+int d;
+a=1;
+b=2;
+c=3;
+d=4;
+while(a<10)
+{
+	if(a<b)
+	{
+		c=c+d;
+		c=c*d;
+	}
+	else
+	{
+		a=a+b*c*d;
+		d=d+b;
+	}
+}

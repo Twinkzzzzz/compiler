@@ -1,0 +1,15 @@
+
+//global
+M[0]=NULL;
+M[1]=NULL;
+M[2]=0;
+fp=1;
+sp=2;
+sp++;
+M[sp]=d;
+sp++;
+M[sp]=c;
+sp++;
+M[sp]=b;
+sp++;
+M[sp]=a;

@@ -1,0 +1,45 @@
+T: {'float', 'int', 'void'}
+D: {'void', 'float', 'int'}
+C: {'void', 'float', 'int', 'e'}
+S: {'if', '{', 'return', 'while', 'd'}
+V: {'if', '{', 'return', 'while', 'd'}
+P: {'if', '{', 'return', 'void', 'e', 'float', 'int', 'while', 'd'}
+A: {'if', '{', 'return', 'void', 'e', 'float', 'int', 'while', 'd'}
+I: {'i'}
+G: {'i', 'd'}
+E: {'i', 'd'}
+F: {'i', 'd'}
+B: {'i', 'd'}
+
+A->P: {'if', '{', 'return', 'void', 'e', 'float', 'int', 'while', 'd'}
+P->CV: {'if', '{', 'return', 'void', 'float', 'int', 'while', 'd'}
+C->e: {'e'}
+C->CD;: {'void', 'float', 'int'}
+V->S: {'if', '{', 'return', 'while', 'd'}
+V->VS: {'if', '{', 'return', 'while', 'd'}
+D->Td: {'float', 'int', 'void'}
+D->Td[I]: {'float', 'int', 'void'}
+D->Td(C){CV}: {'float', 'int', 'void'}
+T->int: {'int'}
+T->float: {'float'}
+T->void: {'void'}
+I->i: {'i'}
+I->I,i: {'i'}
+S->d=E;: {'d'}
+S->if(B)S: {'if'}
+S->if(B)SelseS: {'if'}
+S->while(B)S: {'while'}
+S->returnE;: {'return'}
+S->{V}: {'{'}
+S->d(F);: {'d'}
+F->E: {'i', 'd'}
+F->F,E: {'i', 'd'}
+E->E+G: {'i', 'd'}
+E->G: {'i', 'd'}
+G->i: {'i'}
+G->d: {'d'}
+G->d[F]: {'d'}
+G->d(F): {'d'}
+G->G*G: {'i', 'd'}
+B->ErE: {'i', 'd'}
+B->E: {'i', 'd'}
